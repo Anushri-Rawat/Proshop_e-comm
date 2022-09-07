@@ -1,0 +1,26 @@
+{
+  "name": "mern-e-comm",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "MERN Shopping cart app",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon backend/server",
+    "data:import": "node backend/seeder",
+    "data:destroy": "node backend/seeder -d"
+  },
+  "author": "Anushri Rawat",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.5.4"
+  },
+  "devDependencies": {
+    "concurrently": "^7.3.0"
+  }
+}
