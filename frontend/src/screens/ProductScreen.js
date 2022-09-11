@@ -12,7 +12,7 @@ import {
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import Rating from "../components/Rating";
-import { listProductDetails } from "../actions/productActions";
+import { getProductDetails } from "../actions/productActions";
 import Loader from "../components/Loader";
 import Message from "../components/Message";
 
@@ -27,7 +27,7 @@ const ProductScreen = () => {
   );
 
   useEffect(() => {
-    dispatch(listProductDetails(id));
+    dispatch(getProductDetails(id));
   }, [dispatch, id]);
 
   const addToCartHandler = () => {
