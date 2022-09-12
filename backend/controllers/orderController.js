@@ -78,7 +78,7 @@ export const updateOrderToPaid = asyncHandler(async (req, res) => {
 // @access private/admin
 export const updateOrderToDeliver = asyncHandler(async (req, res) => {
   const order = await Order.findById(req.params.id);
-  console.log(order);
+
   if (order) {
     order.isDelivered = true;
     order.deliveredAt = Date.now();

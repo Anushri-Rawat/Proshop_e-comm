@@ -10,6 +10,7 @@ import {
 import { LinkContainer } from "react-router-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../actions/userActions";
+import SearchBar from "./SearchBar";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -31,6 +32,7 @@ const Header = () => {
             id="basic-navbar-nav"
             className="d-lg-flex justify-content-end"
           >
+            <SearchBar />
             <Nav className="ml-auto">
               <LinkContainer to="/cart">
                 <NavLink>
