@@ -64,6 +64,7 @@ export const createProduct = asyncHandler(async (req, res) => {
     description: "Sample description",
   });
   const createdProduct = await product.save();
+  // const createdProduct = await Product.create({ ...req.body, user: req.user._id });
   res.status(201).json(createdProduct);
 });
 
